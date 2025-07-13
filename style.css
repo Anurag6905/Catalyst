@@ -747,7 +747,7 @@ body {
   .mentorship-heading h2::after {
     content: '';
     display: block;
-    margin: 18px auto 0 auto;
+    margin: 18px auto 18px auto;
     width: 68px;
     height: 4px;
     border-radius: 2px;
