@@ -803,6 +803,7 @@ body {
   .plan-card:hover {
     border-color: #c6ff00;
     transform: translateY(-7px) scale(1.025);
+    cursor: pointer;
   }
   
   .plan-title {

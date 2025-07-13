@@ -3,6 +3,8 @@
   const mobileMenu = document.querySelector('.mobile-menu');
   const closeBtn = document.querySelector('.menu-close');
   const menuLinks = document.querySelectorAll('.mobile-menu a');
+  const plan1 = document.querySelector('#Premium');
+  const plan2 = document.querySelector('#PremiumPlus');
 
   function openMenu() {
     mobileMenu.classList.add('active');
@@ -37,3 +39,18 @@
       closeMenu();
     }
   });
+
+  function Click() {
+    if (plan1) {
+        plan1.addEventListener('click', () => {
+            window.open("https://rzp.io/rzp/Ur3JcBIW", '_blank');
+        });
+    }
+    if (plan2) {
+        plan2.addEventListener('click', () => {
+            window.open("https://rzp.io/rzp/wQaVA2Mu", '_blank');
+        });
+    }
+}
+
+Click();
