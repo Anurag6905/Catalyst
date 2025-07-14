@@ -5,6 +5,7 @@
   const menuLinks = document.querySelectorAll('.mobile-menu a');
   const plan1 = document.querySelector('#Premium');
   const plan2 = document.querySelector('#PremiumPlus');
+  const plan3 = document.querySelector('#Call');
 
   function openMenu() {
     mobileMenu.classList.add('active');
@@ -49,6 +50,11 @@
     if (plan2) {
         plan2.addEventListener('click', () => {
             window.open("https://rzp.io/rzp/wQaVA2Mu", '_blank');
+        });
+    }
+    if (plan3) {
+        plan3.addEventListener('click', () => {
+            window.open("https://rzp.io/rzp/dFCaWjaQ", '_blank');
         });
     }
 }

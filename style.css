@@ -720,39 +720,25 @@ body {
   }
   .mentorship-program-section {
     width: 100%;
-    background: url('image.jpg') center center/cover no-repeat fixed;;
-    padding: 54px 24px 46px 24px;
-    box-sizing: border-box;
-    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    background: url('bg.jpg') center center/cover no-repeat fixed;
+    padding: 48px 0 32px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   
   .mentorship-heading {
-    text-align: center;
     margin-bottom: 38px;
+    text-align: center;
   }
   
   .mentorship-heading h2 {
-    color: #fff;
-    font-size: 2.5rem;
+    font-size: 2.35rem;
     font-weight: 900;
-    letter-spacing: 1.2px;
+    color: #ffffff;
+    letter-spacing: 1.3px;
     margin: 0;
-    letter-spacing: 2px;
     text-transform: uppercase;
-    position: relative;
-  }
-  .mentorship-heading h2::after {
-    content: '';
-    display: block;
-    margin: 18px auto 18px auto;
-    width: 68px;
-    height: 4px;
-    border-radius: 2px;
-    background: #c6ff00;
-    opacity: 0.92;
   }
   
   .mentorship-plans {
@@ -761,28 +747,48 @@ body {
     justify-content: center;
     align-items: center;
     gap: 48px;
-    flex: 1 1 0;
     max-width: 1000px;
     margin: 0 auto;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 2vw;
   }
   
+  /* Card Layout: All cards same width, centered, responsive */
   .plan-card {
     background: #fff;
     border-radius: 18px;
     box-shadow: 0 2px 32px rgba(35,35,35,0.13), 0 2px 8px rgba(198,255,0,0.07);
     padding: 38px 52px 30px 52px;
     width: 100%;
-    max-width: 480px;
+    max-width: 450px;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
     z-index: 1;
     border: 2.5px solid #232323;
-    transition: box-shadow 0.23s cubic-bezier(.77,0,.18,1), border-color 0.18s, transform 0.18s;
+    transition: box-shadow 0.43s cubic-bezier(.77,0,.18,1), border-color 0.48s, transform 0.48s;
     overflow: hidden;
+    box-sizing: border-box;
+    margin: 0 auto;
   }
   
+  .plan-card {
+    flex: 1 1 320px;
+  }
+  .plan-card:nth-child(1) {
+    /* No full width, just normal max-width */
+    order: 1;
+  }
+  .plan-card:nth-child(2) {
+    order: 2;
+  }
+  .plan-card:nth-child(3) {
+    order: 3;
+  }
+  
+  /* Glow effect */
   .plan-card::before {
     content: '';
     position: absolute;
@@ -797,17 +803,16 @@ body {
     z-index: 0;
     pointer-events: none;
   }
-  
   .plan-card:hover::before {
     opacity: 0.17;
   }
-  
   .plan-card:hover {
     border-color: #c6ff00;
     transform: translateY(-7px) scale(1.025);
     cursor: pointer;
   }
   
+  /* Card Title */
   .plan-title {
     color: #232323;
     font-size: 2.05rem;
@@ -820,6 +825,7 @@ body {
     z-index: 1;
   }
   
+  /* Features List */
   .plan-features {
     list-style: none;
     padding: 0;
@@ -827,7 +833,6 @@ body {
     width: 100%;
     z-index: 1;
   }
-  
   .plan-features li {
     display: flex;
     align-items: center;
@@ -844,26 +849,24 @@ body {
     z-index: 1;
     cursor: pointer;
   }
-  
   .plan-features li .plan-icon {
     font-size: 1.25rem;
     margin-right: 13px;
     filter: drop-shadow(0 1px 5px #c6ff0040);
     transition: transform 0.18s, color 0.18s;
   }
-  
   .plan-features li:hover {
     background: #c6ff00;
     color: #232323;
     border-radius: 7px;
     box-shadow: 0 2px 14px #c6ff0033;
   }
-  
   .plan-features li:hover .plan-icon {
     transform: scale(1.22) rotate(-8deg);
     color: #232323;
   }
   
+  /* Price */
   .plan-price {
     margin-bottom: 18px;
     display: flex;
@@ -872,7 +875,6 @@ body {
     justify-content: center;
     z-index: 1;
   }
-  
   .plan-current-price {
     color: #232323;
     font-size: 2.1rem;
@@ -884,7 +886,6 @@ body {
     letter-spacing: 1px;
     transition: background 0.18s, color 0.18s;
   }
-  
   .plan-old-price {
     color: #232323;
     font-size: 1.15rem;
@@ -893,6 +894,7 @@ body {
     font-weight: 700;
   }
   
+  /* CTA Button */
   .plan-cta {
     width: 100%;
     max-width: 180px;
@@ -914,7 +916,6 @@ body {
     z-index: 1;
     overflow: hidden;
   }
-  
   .plan-cta::after {
     content: '';
     position: absolute;
@@ -929,13 +930,11 @@ body {
     transition: width 0.35s cubic-bezier(.77,0,.18,1), height 0.35s cubic-bezier(.77,0,.18,1), opacity 0.18s;
     z-index: 0;
   }
-  
   .plan-cta:hover::after {
     width: 260px;
     height: 260px;
     opacity: 0.18;
   }
-  
   .plan-cta:hover,
   .plan-cta:focus {
     background: #c6ff00;
@@ -944,46 +943,56 @@ body {
     transform: translateY(-2px) scale(1.04);
     border-color: #232323;
   }
-  
   .plan-cta:active {
     background: #232323;
     color: #c6ff00;
     border-color: #c6ff00;
   }
   
+  /* Tablet: reduce gap and padding */
   @media (max-width: 1050px) {
     .mentorship-plans {
       gap: 28px;
     }
     .plan-card {
-      max-width: 100%;
       padding: 32px 20px 24px 20px;
+      max-width: 380px;
     }
   }
   
+  /* Tablet: stack cards vertically */
   @media (max-width: 900px) {
     .mentorship-plans {
       flex-direction: column;
-      align-items: center;
       gap: 32px;
+      align-items: center;
     }
     .plan-card {
-      max-width: 430px;
+      max-width: 90vw;
       width: 100%;
+      flex-basis: 100%;
     }
   }
   
+  /* Mobile: all cards 90vw, centered, no overflow */
   @media (max-width: 600px) {
     .mentorship-program-section {
-      padding: 28px 6vw 20px 6vw;
+      padding: 28px 0 20px 0;
     }
     .mentorship-heading h2 {
       font-size: 1.55rem;
     }
+    .mentorship-plans {
+      padding: 0;
+      gap: 18px;
+    }
     .plan-card {
       padding: 18px 5vw 14px 5vw;
       border-radius: 13px;
-      max-width: 98vw;
+      max-width: 90vw;
+      width: 90vw;
+      box-sizing: border-box;
+      margin: 0 auto;
     }
     .plan-title {
       font-size: 1.07rem;
