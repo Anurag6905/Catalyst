@@ -989,8 +989,8 @@ body {
     .plan-card {
       padding: 18px 5vw 14px 5vw;
       border-radius: 13px;
-      max-width: 90vw;
-      width: 90vw;
+      max-width: 80vw;
+      width: 80vw;
       box-sizing: border-box;
       margin: 0 auto;
     }
