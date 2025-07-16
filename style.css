@@ -34,6 +34,7 @@ body {
     align-items: center;
     letter-spacing: 1px;
     color: #000;
+    animation: fadeInDown 1.2s ease-out forwards;
   }
   
   .logo-icon {
@@ -51,6 +52,7 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
+    animation: fadeInDown 2s ease-out forwards;
   }
   
   .nav-links a {
@@ -79,6 +81,7 @@ body {
     cursor: pointer;
     z-index: 20;
     margin-left: 18px;
+    animation: slideInRight 2s cubic-bezier(.3,.7,.4,1) forwards;
   }
   
   .hamburger span {
@@ -167,6 +170,7 @@ body {
   @media (max-width: 900px) {
     .logo {
       margin-left: 12px;
+      animation: slideInLeft 2s cubic-bezier(.3,.7,.4,1) forwards;
     }
     .nav-links {
       display: none;
@@ -218,6 +222,7 @@ body {
     letter-spacing: -1px;
     text-align: center;
     display: block;
+    animation: fadeInUp 2s ease-out forwards;
   }
   
   .highlight {
@@ -229,6 +234,7 @@ body {
     margin-left: 0.3em;
     margin-right: 0.3em;
     display: inline-block;
+    animation: fadeInUp 2s ease-out forwards;
   }
   
   .hero-desc {
@@ -236,6 +242,7 @@ body {
     color: #e0e0e0;
     margin-bottom: 2.2rem;
     max-width: 430px;
+    animation: slideInLeft 1.8s cubic-bezier(.3,.7,.4,1) forwards;
   }
   
   .cta-circle {
@@ -258,6 +265,7 @@ body {
     box-shadow: 0 2px 16px rgba(198,255,0,0.15);
     overflow: visible;
     text-align: center;
+    animation: slideInRight 1.8s cubic-bezier(.3,.7,.4,1) forwards;
   }
   
   .cta-circle .cta-text {
@@ -1164,3 +1172,45 @@ body {
     }
   }
   
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50%      { transform: scale(1.05); }
+  }
+
+  @keyframes pulseGrow {
+    0%, 100% { transform: scale(1);   }
+    50%      { transform: scale(1.08); }
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0);   }
+    50%      { transform: translateY(-8px); }
+  }
+
+  @keyframes slideInLeft {
+    from { transform: translateX(-200px); opacity: 0; }
+    to   { transform: translateX(0);     opacity: 1; }
+  }
+
+  @keyframes slideInRight {
+    from { transform: translateX(200px); opacity: 0; }
+    to   { transform: translateX(0);     opacity: 1; }
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-50px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes typing   { from { width: 0; } to { width: 100%; } }
+@keyframes blink    { from { border-color: transparent; } to { border-color:#a8d839; } }
