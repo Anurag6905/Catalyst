@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins';
-    background: url('bg.jpg') center center/cover no-repeat fixed;
+    background: url('/assets/bg.jpg') center center/cover no-repeat fixed;
 }
 
 .title {
