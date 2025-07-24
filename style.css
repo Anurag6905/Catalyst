@@ -219,7 +219,7 @@ body {
     line-height: 1.23;
     margin: 0 0 1.3rem 0;
     color: #fff;
-    letter-spacing: -1px;
+    letter-spacing: -3px;
     text-align: center;
     display: block;
     animation: fadeInUp 2s ease-out forwards;
