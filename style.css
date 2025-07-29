@@ -1028,6 +1028,267 @@ body {
       max-width: 100%;
     }
   }
+
+  .notes-section {
+    width: 100%;
+    background: #fff;
+    padding: 48px 0 38px 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+  }
+  
+  .notes-heading {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  
+  .notes-heading span {
+    display: block;
+    color: #343434;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+  
+  .notes-heading h2 {
+    font-size: 2.1rem;
+    color: #232323;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.18;
+  }
+  
+  .notes-heading b {
+    font-weight: 900;
+    color: #232323;
+  }
+
+  .notes-grid {
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 34px 26px;
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  
+  .notes-card {
+    background: #232323;
+    border-radius: 18px;
+    padding: 0px 0px 6px 0px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 2px 16px rgba(35,35,35,0.07);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    transition: transform 0.3s;
+  }
+  
+  .notes-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 4px 24px rgba(35,35,35,0.16);
+    cursor: pointer;
+  }
+  
+  .notes-icon {
+    background: #fff;
+    border-radius: 50%;
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 8px rgba(35,35,35,0.10);
+  }
+  
+  .notes-title {
+    color: #c6ff00;
+    font-size: 1.18rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    margin-top: 2px;
+    letter-spacing: 0.2px;
+  }
+  
+  .notes-desc {
+    color: #fff;
+    font-size: 1.01rem;
+    font-weight: 400;
+    opacity: 0.93;
+    line-height: 1.5;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 1100px) {
+    .notes-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px 18px;
+    }
+  }
+  @media (max-width: 700px) {
+    .notes-grid {
+      grid-template-columns: 1fr;
+      gap: 22px 0;
+      padding: 0 16px;
+      justify-content: center;
+      align-items: center;
+    }
+    .notes-heading h2 {
+      font-size: 1.25rem;
+    }
+    .notes-card {
+      padding: 0px 0px 6px 0px;
+      border-radius: 12px;
+    }
+    .notes-icon {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 12px;
+    }
+    .notes-title {
+      font-size: 1rem;
+    }
+    .notes-desc {
+      font-size: 0.93rem;
+    }
+  }
+  .notes-card {
+    animation: fadeInUp 2s ease-out forwards;
+    width: 280px;
+    height: auto;
+    border-radius: 16px;
+    text-decoration: none;
+    overflow: hidden;
+    background-color: #232323;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .notes-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    height: auto;
+    transition-duration: 0.8s;
+    cursor: pointer;
+  }
+  
+  .card-thumbnail {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  
+  .card-info {
+    padding: 1rem;
+    color: #c6ff00;
+  }
+  
+  .card-info h3 {
+    margin: 0;
+    font-family: 'Poppins';
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  .card-info .number {
+    font-family: 'Poppins';
+    font-size: 1.1rem;
+    color: white;
+    margin-top: 0.2rem;
+    margin-bottom: 0;
+    font-weight: 500;
+  }
+  
+  .card-info .description {
+    font-family: 'Poppins';
+    font-size: 0.85rem;
+    color: #333;
+    margin-top: 0.2rem;
+  }
+
+  .card-info a img{
+    width: 40px;
+    height: 40px;
+  }
+
+  .notes-btn {
+    margin: 24px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .note-cta {
+    width: 100%;
+    max-width: 180px;
+    padding: 14px 0;
+    background: #232323;
+    color: #c6ff00;
+    font-weight: 900;
+    font-size: 1.13rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(198,255,0,0.10);
+    letter-spacing: 1.2px;
+    margin-top: 8px;
+    transition: background 0.18s, color 0.18s, box-shadow 0.18s, transform 0.18s;
+    outline: none;
+    border: 2px solid #c6ff00;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+  }
+  .note-cta::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 0;
+    height: 0;
+    background: #c6ff00;
+    opacity: 0.11;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.35s cubic-bezier(.77,0,.18,1), height 0.35s cubic-bezier(.77,0,.18,1), opacity 0.18s;
+    z-index: 0;
+  }
+  .note-cta:hover::after {
+    width: 260px;
+    height: 260px;
+    opacity: 0.18;
+  }
+  .note-cta:hover,
+  .note-cta:focus {
+    background: #c6ff00;
+    color: #232323;
+    box-shadow: 0 8px 32px 0 #c6ff00, 0 2px 14px rgba(35,35,35,0.13);
+    transform: translateY(-2px) scale(1.04);
+    border-color: #232323;
+  }
+  .note-cta:active {
+    background: #232323;
+    color: #c6ff00;
+    border-color: #c6ff00;
+  }
+  
+  @media (max-width: 500px){
+    .title {
+      font-size: 1.4rem;
+    }
+  }
   
   
   .footer {
